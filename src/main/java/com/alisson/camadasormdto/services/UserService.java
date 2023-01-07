@@ -2,6 +2,7 @@ package com.alisson.camadasormdto.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.alisson.camadasormdto.dto.UserDTO;
 import com.alisson.camadasormdto.entities.User;
@@ -14,6 +15,7 @@ public class UserService {
 	private UserRepository repository;
 	
 	//Chama a busca de usuário do repositório e retorna um DTO para o controlador
+	@Transactional(readOnly = true)
 	public UserDTO findById(Long id) {
 		User entity = repository.findById(id).get();
 		//Converte 'User' para 'UserDTO'
