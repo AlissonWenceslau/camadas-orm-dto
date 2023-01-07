@@ -11,9 +11,9 @@ public class UserDTO {
 		
 	}
 
-	public UserDTO(Long id, String senha) {
+	public UserDTO(Long id, String nome) {
 		this.id = id;
-		this.name = senha;
+		this.name = nome;
 	}
 	
 	public UserDTO(User user) {
