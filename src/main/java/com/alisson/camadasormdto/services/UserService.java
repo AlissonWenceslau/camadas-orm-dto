@@ -1,5 +1,8 @@
 package com.alisson.camadasormdto.services;
 
-public class UserService {
+import org.springframework.stereotype.Service;
 
+@Service
+public class UserService {
+	
 }
